@@ -1,0 +1,103 @@
+/*header*/
+.header {
+  max-width: 100%;
+  background-color: $White;
+  z-index: 5;
+
+  &__main {
+    max-width: 90%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    // padding: 10px 0;
+
+    .logo {
+      margin: 0.5em 0;
+
+      .logo__1 {
+        margin-bottom: 0.5em;
+        max-width: 100%;
+      }
+      .logo__2 {
+        max-width: 100%;
+        margin-top: 0.5em;
+      }
+    }
+
+    .nav {
+      padding: 0 15px;
+
+      .nav__menu {
+        .nav__link--active {
+          color: $Blue;
+          text-transform: uppercase;
+        }
+      }
+      .nav__item {
+        display: inline-block;
+        margin-left: 1em;
+        position: relative;
+
+        a {
+          display: block;
+          padding: 12px 0;
+          font-size: 14px;
+          color: $Text-color;
+          text-transform: capitalize;
+          font-weight: 600;
+          transition: all 0.3s ease;
+
+          .plus {
+            display: inline-block;
+            height: 12px;
+            width: 12px;
+            position: relative;
+            margin-left: 5px;
+            pointer-events: none;
+          }
+          .plus:before,
+          .plus:after {
+            content: "";
+            position: absolute;
+            box-sizing: border-box;
+            left: 10%;
+            top: 70%;
+            background-color: $Text-color;
+            height: 2px;
+            width: 50%;
+            transform: translate(-50%, -50%);
+            transition: all 0.3s ease;
+          }
+          .plus:after {
+            transform: translate(-50%, -50%) rotate(-90deg);
+          }
+          &:hover {
+            color: $Bluish;
+          }
+        }
+        .sub__menu {
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+          width: 220px;
+          position: absolute;
+          left: 0;
+          top: 100%;
+          background-color: $White;
+          padding: 10px 0;
+          border-top: 3px solid $Bluish;
+          transform: translateY(10px);
+          transition: all 0.3s ease;
+          opacity: 0;
+          visibility: hidden;
+          z-index: 5;
+        }
+        &:hover {
+          .plus:before,
+          .plus:after {
+            background-color: $Bluish;
+          }
+        }
+      }
+    }
+  }
+}

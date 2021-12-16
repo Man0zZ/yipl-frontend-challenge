@@ -1,0 +1,98 @@
+/* CONTACT */
+.contact {
+  background: #3c3d41;
+  position: relative;
+
+  p {
+    color: $Text-color;
+  }
+  a {
+    color: #cccccc;
+  }
+  .columns {
+    max-width: 90%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 4em 0;
+
+    a:hover {
+      color: $Bluish;
+    }
+
+    .contact__column {
+      display: flex;
+      flex-direction: column;
+      line-height: 25px;
+    }
+    .col-1 {
+      .logo {
+        .logo__1 {
+          margin-bottom: 0.5em;
+          max-width: 100%;
+        }
+        .logo__2 {
+          max-width: 100%;
+          margin-top: 0.5em;
+        }
+      }
+      .contact__detail {
+        color: $White;
+        font-weight: bold;
+      }
+    }
+    .contact__column:nth-child(2),
+    .contact__column:nth-child(3),
+    .contact__column:nth-child(4) {
+      margin-top: 2.5em;
+
+      p {
+        color: $White;
+        font-size: 1.5em;
+        margin-bottom: 1em;
+      }
+    }
+    .col-4 {
+      .input__icon {
+        position: relative;
+
+        .input {
+          border: none;
+          border-radius: 30px;
+          padding: 1.3em 0;
+          padding-right: 7em;
+          padding-left: 1em;
+          outline: none;
+        }
+        svg {
+          position: absolute;
+          top: 7px;
+          right: 20px;
+          cursor: pointer;
+          color: $Blue;
+
+          &:hover {
+            color: $Text-color;
+          }
+        }
+      }
+    }
+  }
+  .arrow {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin: 0 2em 1em;
+    cursor: pointer;
+
+    * {
+      margin: 0.5em 0 0;
+    }
+    #arrow {
+      color: $White;
+    }
+  }
+}

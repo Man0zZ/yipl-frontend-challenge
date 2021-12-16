@@ -1,0 +1,45 @@
+/* ABOUT */
+.about {
+  max-width: 90%;
+  margin: auto;
+  line-height: 25px;
+  display: grid;
+  align-items: center;
+  grid-auto-flow: row;
+  gap: 2rem;
+
+  &__content {
+    padding-right: 50px;
+
+    h1 {
+      font-size: 1.8rem;
+    }
+    .line-1 {
+      display: flex;
+
+      img {
+        margin-right: 15px;
+      }
+    }
+    p {
+      color: $Text-color;
+      font-weight: bold;
+      padding-left: 75px;
+      padding-top: 20px;
+      padding-bottom: 20px;
+    }
+    a {
+      font-weight: bold;
+      color: $Dark;
+      padding-left: 75px;
+    }
+  }
+  // .about__content * {
+  //   margin: 0 0 0.5em;
+  // }
+}
+@media (min-width: 769px) {
+  .about {
+    grid-auto-flow: column;
+  }
+}

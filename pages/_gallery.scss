@@ -1,0 +1,268 @@
+/* GALLERY */
+.team {
+  max-width: 90%;
+  margin: auto;
+
+  * {
+    margin: 1em 0 0;
+  }
+  &__detail {
+    h1 {
+      font-size: 1.8em;
+    }
+    p {
+      padding-left: 70px;
+      color: $Text-color;
+      font-weight: bold;
+    }
+  }
+  .line-2 {
+    display: flex;
+    margin-bottom: 1em;
+
+    img {
+      margin-right: 10px;
+    }
+    .our-team {
+      margin-top: 25px;
+    }
+  }
+  .about__team {
+    display: grid;
+    grid-auto-flow: row;
+    gap: 2rem;
+    justify-content: center;
+
+    .name {
+      .line-2 {
+        margin: 0;
+      }
+      .social__icon {
+        display: flex;
+        gap: 1em;
+        cursor: pointer;
+
+        i:hover {
+          color: $Text-color;
+        }
+        .john {
+          color: $Blue;
+        }
+      }
+      p {
+        color: #808080;
+      }
+    }
+  }
+  @media (min-width: 769px) {
+    .about__team {
+      grid-auto-flow: column;
+    }
+  }
+}
+
+.gallery {
+  background: $Bg-color;
+
+  &__container {
+    max-width: 90%;
+    padding: 3em 0;
+    margin: auto;
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: 1fr 1fr;
+
+    .gallery__detail {
+      margin-bottom: 3em;
+
+      .line-2 {
+        display: flex;
+        margin-bottom: 1em;
+
+        img {
+          margin-right: 10px;
+        }
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+      p {
+        padding-left: 70px;
+        @include set-background($Bg-color);
+        font-weight: bold;
+        margin-bottom: 3em;
+      }
+    }
+    .album__1 {
+      svg {
+        margin-top: 2em;
+      }
+      * {
+        margin: 1em 0 0;
+      }
+      .bg__img1 {
+        min-height: 80vh;
+        background-image: url("/img/Rectangle\ 7.6.png");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        color: $White;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding-left: 2em;
+
+        * {
+          margin: 1em 0 0;
+        }
+        span {
+          font-size: small;
+
+          i {
+            margin-right: 5px;
+          }
+        }
+      }
+    }
+    .album__2 {
+      svg {
+        margin-top: 2em;
+      }
+      * {
+        margin: 1em 0 0;
+      }
+      .bg__img2 {
+        min-height: 80vh;
+        background-image: url("/img/Rectangle\ 7.3.png");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        color: $White;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding-left: 2em;
+        margin-top: 3em;
+
+        span {
+          font-size: small;
+
+          i {
+            margin-right: 5px;
+          }
+        }
+      }
+    }
+  }
+}
+
+// Client Testimonials
+.clients__container {
+  max-width: 90%;
+  margin: auto;
+
+  .clients__detail {
+    .line-2 {
+      display: flex;
+      margin-bottom: 1em;
+
+      img {
+        margin-right: 10px;
+      }
+    }
+    h1 {
+      font-size: 1.8em;
+    }
+    p {
+      padding-left: 70px;
+      color: $Text-color;
+      font-weight: bold;
+      margin-bottom: 3em;
+    }
+  }
+  .client {
+    display: grid;
+    grid-auto-flow: row;
+    gap: 2rem;
+
+    .comments {
+      p {
+        color: $White;
+        background: rgb(161, 161, 161);
+        padding: 2em;
+      }
+    }
+    .client__1 {
+      line-height: 25px;
+
+      .radio-btn {
+        display: flex;
+        gap: 1em;
+        justify-content: center;
+        float: right;
+        margin-top: 3em;
+      }
+    }
+  }
+  @media (min-width: 769px) {
+    .client {
+      grid-auto-flow: column;
+    }
+  }
+  .client__detail {
+    display: flex;
+    align-items: center;
+    gap: 1em;
+    margin-left: 2em;
+  }
+  .client__2 {
+    line-height: 25px;
+  }
+}
+
+// Partners
+.partners {
+  background: $Bg-color;
+  height: 39vh;
+  padding-top: 4em;
+
+  &__container {
+    max-width: 90%;
+    margin: auto;
+
+    h1 {
+      font-size: 2.4em;
+    }
+    .line-2 {
+      display: flex;
+      margin-bottom: 1em;
+
+      img {
+        margin-right: 10px;
+      }
+    }
+  }
+
+  .networks {
+    display: grid;
+    grid-gap: 2em;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+
+    .network {
+      background: $White;
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+      margin-top: 2em;
+
+      p {
+        font-size: 1.2em;
+        font-weight: bold;
+        margin-top: 10px;
+      }
+    }
+  }
+}

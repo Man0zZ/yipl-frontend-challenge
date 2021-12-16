@@ -1,0 +1,18 @@
+body {
+  min-height: 100vh;
+  display: grid;
+  grid-template:
+    "header"
+    "main"
+    "footer";
+}
+.header {
+  grid-area: header;
+}
+main {
+  grid-area: main;
+  font-family: $font;
+}
+.footer {
+  grid-area: footer;
+}
